@@ -6,11 +6,11 @@ metadata:                                    # Identifying info about this Appli
 spec:                                        # Desired state of the Application
   project: default                           # Argo CD project (permission group); "default" allows everything
   source:                                    # Where the manifests come from
-    repoUrl: https://github.com/associate-rahul-chauhan/argocd-learning.git                                # NOTE: must be "repoURL" (capital URL) and needs a value, e.g. https://github.com/<user>/<repo>.git
+    repoURL: 'https://github.com/associate-rahul-chauhan/argocd-learning.git'   # Git repo URL (field name needs capital "URL")
     targetRevision: main                     # Git branch, tag or commit to deploy
-    path: apps/nginx                         # Folder inside the repo holding the YAML files (must exist in the repo)
+    path: basic-nginx/nginx             # Folder inside the repo holding the YAML files (must exist in the repo)
   destination:                               # Where to deploy
-    server: https://kubernetes.default.svc   # The cluster Argo CD itself runs in
+    server: 'https://kubernetes.default.svc'   # The cluster Argo CD itself runs in
     namespace: demo                          # Namespace to deploy the app into
   syncPolicy:                                # How syncing is done
     automated:                               # Sync automatically, no manual button click

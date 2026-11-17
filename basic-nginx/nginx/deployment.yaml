@@ -16,4 +16,4 @@ spec:                                        # Desired state of the Deployment
         - name: nginx                        # Container name (the "-" starts a list item)
           image: nginx:1.27                  # Image to pull from Docker Hub, pinned to version 1.27
           ports:                             # Ports the container listens on
-            containerPort: 80                # NOTE: this should be a list item: "- containerPort: 80". Without the "-", Kubernetes rejects it
+            - containerPort: 80              # Port 80 inside the container (list item)
