@@ -3,7 +3,7 @@ kind: Deployment                             # Type of object: manages a set of 
 metadata:                                    # Identifying info about this Deployment
   name: nginx                                # Name of the Deployment
 spec:                                        # Desired state of the Deployment
-  replicas: 2                                # Run 2 copies (pods) of nginx
+  replicas: 3                                # Run 2 copies (pods) of nginx
   selector:                                  # How the Deployment finds the pods it owns
     matchLabels:                             # Match pods that have these labels
       app: nginx                             # Pods labelled app=nginx belong to this Deployment (must match template labels)
